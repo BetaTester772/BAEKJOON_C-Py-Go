@@ -1,10 +1,12 @@
 N = int(input())
 
-age = []
-nlist = []
+slist = []
 
 for i in range(N):
-    a, n = map(str, input().split())
-    age.append(a)
-    nlist.append(n + ' ' + age)
+    slist.append(list(map(str, input().split())))
+    slist[i][0] = int(slist[i][0])
 
+slist.sort(key=lambda slist: slist[0])
+
+for i in range(N):
+    print(slist[i][0], slist[i][1])
